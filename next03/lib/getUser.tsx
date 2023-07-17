@@ -3,7 +3,8 @@ export default async function getUser(userId: string) {
         `https://jsonplaceholder.typicode.com/users/${userId}`
     )
     if (!res.ok) {
-        throw new Error('Failed to fetch data ')
+        // throw new Error('Failed to fetch data ')
+        return undefined
     }
 
     return res.json()
